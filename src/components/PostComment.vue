@@ -18,7 +18,7 @@ const user = useUserState();
 const props = defineProps(['postId']);
 const comments = ref([]);
 const newComment = ref('');
-let curPage = 0;
+let curPage = 1;
 let perPage = 20;
 let pageEnded = false;
 

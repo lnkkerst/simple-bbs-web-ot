@@ -2,7 +2,7 @@ import http from '../utils/http';
 
 export const getCommentsByPostId = async ({
   postId,
-  page = 0,
+  page = 1,
   size = 20
 } = {}) => {
   let skip = (page - 1) * size;

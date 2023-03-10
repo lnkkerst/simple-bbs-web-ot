@@ -5,7 +5,7 @@ export const getPost = async ({ id }) => {
   return await http.get(`/posts/${id}`).then(res => res.data);
 };
 
-export const getPosts = async ({ page = 0, size = 20 } = {}) => {
+export const getPosts = async ({ page = 1, size = 20 } = {}) => {
   const skip = (page - 1) * size;
   const limit = size;
   const data = await http

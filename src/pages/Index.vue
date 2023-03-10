@@ -13,7 +13,7 @@ import { useInfiniteScroll } from '@vueuse/core';
 const router = useRouter();
 
 let posts = ref([]);
-let curPage = 0;
+let curPage = 1;
 let perPage = 20;
 let pageEnded = false;
 
