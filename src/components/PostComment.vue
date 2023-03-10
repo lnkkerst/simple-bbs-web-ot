@@ -54,8 +54,6 @@ onMounted(async () => {
 <template>
   <div>
     <template v-if="user.isLoggedIn">
-      <ElDivider></ElDivider>
-
       <div>
         <div text="xl" font="bold" my="sm">发布新评论</div>
         <ElInput type="textarea" my="sm" v-model="newComment"></ElInput>
@@ -69,8 +67,10 @@ onMounted(async () => {
       想要发评论，请先
       <RouterLink text-blue to="/login">登录</RouterLink>
     </div>
-    <div text="xl" font="bold" my="sm">评论区</div>
 
+    <ElDivider></ElDivider>
+
+    <div text="xl" font="bold" my="sm">评论区</div>
     <ElTimeline>
       <ElTimelineItem v-for="comment in comments">
         <ElCard>
