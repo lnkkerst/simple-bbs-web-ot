@@ -9,8 +9,8 @@ import {
 } from 'element-plus';
 import { marked } from 'marked';
 import { onMounted, ref } from 'vue';
-import { createComment, getCommentsByPostId } from '../api/comments';
-import { useUserState } from '../composables/state';
+import { createComment, getCommentsByPostId } from '~/api/comments';
+import { useUserState } from '~/composables/state';
 import { useInfiniteScroll } from '@vueuse/core';
 
 const user = useUserState();
@@ -28,7 +28,6 @@ const handleSubmit = async () => {
 };
 
 const load = async () => {
-  console.log('loading');
   if (pageEnded) {
     return;
   }

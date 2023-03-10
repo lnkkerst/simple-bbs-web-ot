@@ -3,7 +3,7 @@ import { ElButton, ElCard, ElForm, ElFormItem, ElInput } from 'element-plus';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { login } from '~/api/users';
-import { useUserState } from '../composables/state';
+import { useUserState } from '~/composables/state';
 
 const router = useRouter();
 const user = useUserState();

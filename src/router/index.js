@@ -4,8 +4,9 @@ import Posts from '~/pages/Posts.vue';
 import Login from '~/pages/Login.vue';
 import Register from '~/pages/Register.vue';
 import CreatePost from '~/pages/CreatePost.vue';
-import { useUserState } from '../composables/state';
+import { useUserState } from '~/composables/state';
 
+// 手写路由
 const routes = [
   {
     path: '/',
@@ -48,6 +49,7 @@ const router = createRouter({
   routes
 });
 
+// 路由守卫，需要登录的页面直接跳转到登陆页面
 router.beforeEach((to, from) => {
   const user = useUserState();
   if (to.meta.requireLoggedIn && !user.value.isLoggedIn) {

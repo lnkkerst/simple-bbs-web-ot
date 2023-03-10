@@ -1,12 +1,5 @@
 <script setup>
-import {
-  ElButton,
-  ElConfigProvider,
-  ElContainer,
-  ElHeader,
-  ElMain,
-  ElPageHeader
-} from 'element-plus';
+import { ElButton, ElContainer, ElHeader, ElMain } from 'element-plus';
 import { RouterLink, useRouter } from 'vue-router';
 import { useUserState } from './composables/state';
 

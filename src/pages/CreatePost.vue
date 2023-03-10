@@ -2,7 +2,7 @@
 import { ElButton, ElInput } from 'element-plus';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import { createPost } from '../api/posts';
+import { createPost } from '~/api/posts';
 
 const router = useRouter();
 

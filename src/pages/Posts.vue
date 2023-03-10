@@ -1,10 +1,8 @@
 <script setup>
 import { useRoute } from 'vue-router';
-import { getPost } from '~/api/posts';
-import { onMounted, ref } from 'vue';
 import PostContent from '~/components/PostContent.vue';
-import PostComment from '../components/PostComment.vue';
-import { ElDialog, ElDivider } from 'element-plus';
+import PostComment from '~/components/PostComment.vue';
+import { ElDivider } from 'element-plus';
 
 const route = useRoute();
 

@@ -1,5 +1,5 @@
 import { getPrevMonthLastDays } from 'element-plus/es/components/calendar/src/date-table';
-import http from '../utils/http';
+import http from '~/utils/http';
 
 export const getPost = async ({ id }) => {
   return await http.get(`/posts/${id}`).then(res => res.data);
