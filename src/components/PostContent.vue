@@ -23,7 +23,11 @@ onMounted(async () => {
     <div flex>
       <div grow></div>
       <span text="gray">
-        {{ post.author?.username }}
+        {{
+          `${post.author?.username} 于 ${new Date(
+            post.publish_at * 1000
+          ).toLocaleString()}`
+        }}
       </span>
     </div>
     <div v-html="marked.parse(post.content ?? '')"></div>

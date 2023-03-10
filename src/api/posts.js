@@ -5,8 +5,12 @@ export const getPost = async ({ id }) => {
   return await http.get(`/posts/${id}`).then(res => res.data);
 };
 
-export const getPosts = async () => {
-  const data = await http.get('/posts').then(res => res.data);
+export const getPosts = async ({ page = 0, size = 20 } = {}) => {
+  const skip = (page - 1) * size;
+  const limit = size;
+  const data = await http
+    .get('/posts', { params: { skip, limit } })
+    .then(res => res.data);
   data.forEach(post => {
     post.summary = post.content.slice(0, 200);
     delete post.content;

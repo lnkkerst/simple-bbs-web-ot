@@ -40,16 +40,16 @@ const handleLogout = () => {
           <ElButton link type="danger" @click="handleLogout">登出</ElButton>
         </template>
         <ElButton v-else link type="primary" @click="router.push('/login')">
-          登陆
+          登录
         </ElButton>
       </div>
     </ElHeader>
 
-    <div max-w="960px" w="96/100" mx="auto">
-      <ElMain>
+    <ElMain>
+      <div max-w="960px" w="96/100" mx="auto">
         <RouterView></RouterView>
-      </ElMain>
-    </div>
+      </div>
+    </ElMain>
   </ElContainer>
 </template>
 

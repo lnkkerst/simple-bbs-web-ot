@@ -1,8 +1,14 @@
 import http from '../utils/http';
 
-export const getCommentsByPostId = async ({ postId }) => {
+export const getCommentsByPostId = async ({
+  postId,
+  page = 0,
+  size = 20
+} = {}) => {
+  let skip = (page - 1) * size;
+  let limit = size;
   return await http
-    .get('/comments', { params: { post_id: postId } })
+    .get('/comments', { params: { post_id: postId, skip, limit } })
     .then(res => res.data);
 };
 

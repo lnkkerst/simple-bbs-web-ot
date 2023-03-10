@@ -9,12 +9,6 @@ import { ElDialog, ElDivider } from 'element-plus';
 const route = useRoute();
 
 const { postId } = route.params;
-
-const post = ref({});
-
-onMounted(async () => {
-  post.value = await getPost({ id: postId });
-});
 </script>
 
 <template>
