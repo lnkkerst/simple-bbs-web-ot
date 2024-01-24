@@ -36,7 +36,7 @@ const routes = [
     meta: { requireLoggedIn: false }
   },
   {
-    path: '/:pathMatch(.*)*',
+    path: '/:pathMatch(.*)*', // 404 路由
     component: {
       template: `页面不存在`
     },

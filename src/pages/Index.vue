@@ -1,9 +1,5 @@
 <script setup>
-import {
-  ElButton,
-  ElCard,
-  ElInfiniteScroll as vInfiniteScroll
-} from 'element-plus';
+import { ElButton, ElCard } from 'element-plus';
 import { onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { getPosts } from '~/api/posts';
@@ -62,6 +58,6 @@ onMounted(async () => {
       </div>
     </ElCard>
 
-    <div text="gray center">一滴都没有了</div>
+    <div text="gray center">没有更多数据</div>
   </div>
 </template>

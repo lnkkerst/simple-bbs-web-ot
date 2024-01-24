@@ -1,4 +1,5 @@
 <script setup>
+// 这个文件里面直接写了布局
 import { ElButton, ElContainer, ElHeader, ElMain } from 'element-plus';
 import { RouterLink, useRouter } from 'vue-router';
 import { useUserState } from './composables/state';

@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.36.0",
+    "@types/marked": "^4.0.8",
     "@unocss/preset-attributify": "^0.50.4",
     "@unocss/preset-typography": "^0.50.4",
     "@unocss/preset-uno": "^0.50.4",
